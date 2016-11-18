@@ -1,0 +1,13 @@
+<ul [ngClass]="css" [style.display]="expanded ? 'block' : 'none'">
+    <li *ngFor="let menu of items" [ngClass]="{'active': menu.active}">
+        <a href="{{menu.url||'#'}}" (click)="onSelect($event, menu)">
+            <i *ngIf="menu.icon" class="material-icons">{{menu.icon}}</i>
+            <span>{{menu.label}}</span>
+            <i *ngIf="(menu.items && menu.expanded)" class="material-icons">keyboard_arrow_up</i>
+            <i *ngIf="(menu.items && !menu.expanded)" class="material-icons">keyboard_arrow_down</i>
+        </a>
+        <ui-menu *ngIf="menu.items" [expanded]="menu.expanded" [items]="menu.items"></ui-menu>
+    </li>
+</ul>
+
+
