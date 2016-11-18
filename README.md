@@ -8,16 +8,16 @@ Angular 2 ui-components
 getUser(id: number):  void {
     this.loading.start();
     this.userService.getUser(id)
-	.subscribe(
-	    (user: User) => {
+        .subscribe(
+            (user: User) => {
                 this.user = user;
                 this.loading.complete();
-	    },
-	    (error: HandleError) => {
+            },
+            (error: HandleError) => {
                 this.loading.complete();
                 console.log(error.message);
-	    }
-	);
+            }
+        );
 }
 ```
 
