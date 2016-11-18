@@ -3,20 +3,19 @@ Angular 2 ui-components
 
 ## Installation
 
-## How to use
+## How to use loading bar
 ```
-public getUser(id: number):  void
-{
+getUser(id: number):  void {
     this.loading.start();
     this.userService.getUser(id)
 	.subscribe(
 	    (user: User) => {
-		this.user = user;
-		this.loading.complete();
+                this.user = user;
+                this.loading.complete();
 	    },
 	    (error: HandleError) => {
-		this.loading.complete();
-		console.log(error.message);
+                this.loading.complete();
+                console.log(error.message);
 	    }
 	);
 }
