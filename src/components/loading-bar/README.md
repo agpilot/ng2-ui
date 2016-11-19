@@ -16,21 +16,27 @@ Here's the component class ```user.component.ts```
 ```ts
 ...
 import {UILoadingBarService} from "agpilot/index";
+...
 
-public constructor(public loading: UILoadingBarService) {}
+export class UserComponent implements OnInit
+{
+    public user: User;
+    public constructor(private loading: UILoadingBarService, private userService: UserService) {}
 
-public getUser(id: number):  void {
-    this.loading.start();
-    this.userService.getUser(id)
-        .subscribe(
-            (user: User) => {
-                this.user = user;
-                this.loading.complete();
-            },
-            (error: HandleError) => {
-                this.loading.complete();
-                console.log(error.message);
-            }
-        );
+    public getUser(id: number):  void 
+    {
+        this.loading.start();
+        this.userService.getUser(id)
+            .subscribe(
+                (user: User) => {
+                    this.user = user;
+                    this.loading.complete();
+                },
+                (error: HandleError) => {
+                    this.loading.complete();
+                    console.log(error.message);
+                }
+            );
+    }
 }
 ```
