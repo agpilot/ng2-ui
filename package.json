@@ -1,0 +1,43 @@
+{
+  "name": "ui-components",
+  "version": "0.1.0",
+  "description": "UI-components for Angular 2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agpilot/ng2-ui.git"
+  },
+  "keywords": [
+    "angular2",
+    "loading",
+    "bar",
+    "progress",
+    "menu"
+  ],
+  "author": "Andrei Bashko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agpilot/ng2-ui/issues"
+  },
+  "dependencies": {
+    "@angular/common": "~2.0.1",
+    "@angular/compiler": "~2.0.1",
+    "@angular/core": "~2.0.1",
+    "@angular/forms": "~2.0.1",
+    "@angular/http": "~2.0.1",
+    "@angular/platform-browser": "~2.0.1",
+    "@angular/platform-browser-dynamic": "~2.0.1",
+    "@angular/router": "~3.0.1",
+    "@angular/upgrade": "~2.0.1",
+    "@types/node": "^6.0.34",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "5.0.0-beta.12",
+    "systemjs": "0.19.39",
+    "zone.js": "^0.6.25"
+  },
+  "devDependencies": {
+    "concurrently": "^3.0.0",
+    "typescript": "^2.1.1",
+    "typings":"^1.4.0"
+  }
+}

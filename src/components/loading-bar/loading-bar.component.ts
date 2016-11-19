@@ -5,7 +5,11 @@ import {UILoadingBarEvent} from "./loading-bar.event";
 @Component({
     moduleId: module.id,
     selector: 'ui-loading-bar',
-    templateUrl: 'loading-bar.component.html'
+    template: `
+        <div [ngClass]="cssWrapper">
+            <div [ngClass]="cssBar" [style.width]="progress" [style.opacity]="visible?1:0"></div>
+        </div>
+    `
 })
 
 export class UILoadingBarComponent implements OnInit
